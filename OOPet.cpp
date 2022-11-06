@@ -36,6 +36,10 @@ OOPet::OOPet(std::string newName) {
 	happy = true;
 }
 
+OOPet::~OOPet() {
+	std::cout << "Goodbye " << name << "!" << '\n';
+}
+
 void Dog::walk() {
 	if (happy) {
 		std::cout << "You took " << name << " on a walk and they enjoyed it! " << goodNoises[random(goodNoises.size())] << '\n';
@@ -66,7 +70,7 @@ Dog::Dog(std::string newName) : OOPet(newName) {}
 void Dog::interact() {
 	int loop = 1;
 	while (loop) {
-		std::cout << "What would you like to do with " << name << "?" << '\n';
+		std::cout << "\n" << "What would you like to do with " << name << "?" << '\n';
 		std::cout << "1. Feed " << name << '\n';
 		std::cout << "2. Walk " << name << '\n';
 		std::cout << "3. Play fetch with " << name << '\n';
@@ -124,7 +128,7 @@ void Cat::interact() {
 	int loop = 1;
 	while (loop) {
 		int choice = 0;
-		std::cout << "What would you like to do with " << name << "?" << '\n';
+		std::cout << "\n" << "What would you like to do with " << name << "?" << '\n';
 		std::cout << "1. Feed " << name << '\n';
 		std::cout << "2. Pat " << name << '\n';
 		std::cout << "3. Play with " << name << '\n';

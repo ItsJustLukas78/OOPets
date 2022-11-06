@@ -9,6 +9,7 @@ public:
 	std::string name;
 	OOPet(std::string newName);
 	virtual void interact() = 0;
+	virtual~OOPet();
 
 protected:
 
